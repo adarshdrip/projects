@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple To-Do App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HOME -->
+<div id="home" class="screen">
+  <h2>Home</h2>
+  <button onclick="showScreen('tasks')">See My Task</button>
+  <button onclick="showScreen('add')">+ Add Task</button>
+  <button onclick="showScreen('status')">My Status</button>
+</div>
+
+<!-- ADD TASK -->
+<div id="add" class="screen hidden">
+  <h2>Add Task</h2>
+  <input id="taskName" placeholder="Task name">
+  <button onclick="addTask()">Save</button>
+  <button onclick="goHome()">Back</button>
+</div>
+
+<!-- SEE TASKS -->
+<div id="tasks" class="screen hidden">
+  <h2>My Tasks</h2>
+  <div id="taskList"></div>
+  <button onclick="goHome()">Back</button>
+</div>
+
+<!-- STATUS -->
+<div id="status" class="screen hidden">
+  <h2>My Status</h2>
+  <div id="statusList"></div>
+  <button onclick="goHome()">Back</button>
+</div>
+
+<!-- GRAPH -->
+<div id="graph" class="screen hidden">
+  <h2 id="graphTitle"></h2>
+  <canvas id="chart" width="300" height="150"></canvas>
+  <button onclick="showScreen('status')">Back</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
